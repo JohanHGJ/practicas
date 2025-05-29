@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .title_active{
+            display: flex;
+        }
+        .title_disable{
+            display: none;
+        }
+    </style>
+    <section id="main_box" class="title_active">
+        <h1>Hola!! </h1>
+    </section>
+    <button>Ocultar</button>
+    <script>
+        const box = document.querySelector("#main_box");
+        const button = document.querySelector("button");
+        
+        button.addEventListener("click", ()=>{
+            if(box.classList.contains("title_active")){
+                box.classList.replace("title_active", "title_disable");
+                button.textContent = "Mostrar";
+            }else{
+                box.classList.replace("title_disable", "title_active");
+                button.textContent = "Ocultar";
+            }
+        });
+    </script>
+</body>
+</html>

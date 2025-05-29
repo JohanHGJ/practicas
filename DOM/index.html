@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        [type="title"]{
+            color: rgb(255, 0, 0);
+        }
+    </style>
+
+    <h1 class="title" id="title" type="title">Hola a todos</h1>
+    <img src="" alt="">
+    <input type="checkbox">
+    <input type="text" class="texto">
+    <button>OK</button>
+
+    <script>
+        //? Metodos de seleccion
+        const h1 = document.getElementsByClassName("title");
+        const h1_id = document.getElementById("title");
+        const etiqueta_h1 = document.querySelector("h1"); // es para capturar etiquetas
+        const class_h1 = document.querySelector(".titulo"); // tambien este querySelector permite capturar clases y Id.
+        const atributo_h1 = document.querySelector("[type='title']"); // puede seleccionar un atributo que nosotros establezcamos
+        console.log(etiqueta_h1);
+
+        // metodos de insersion
+        etiqueta_h1.innerText = ""; // este inserta un texto
+        etiqueta_h1.textContent = ""; // este actualiza el texto insertado
+        etiqueta_h1.innerHTML = ""; // sirve para ingresar elementos html
+
+        etiqueta_h1.classList
+        etiqueta_h1.classList.add(""); // agrega una clase
+        etiqueta_h1.classList.remove(""); // elimina una clase
+        etiqueta_h1.classList.replace("", ""); // remplaza una clase  
+        etiqueta_h1.classList.contains("");// verifica si existe una clase
+
+        etiqueta_h1.style = "color: blue";
+        etiqueta_h1.style.color = "red";
+        const img = document.querySelector("img");
+        img.src = "";
+
+        const input = document.querySelector("input");
+        input.checked = true;
+
+        const email = document.querySelector(".texto");
+        email.setAttribute("value", "hola");
+
+        const button = document.querySelector("button");
+        button.disabled = true;
+    </script>
+</body>
+</html>

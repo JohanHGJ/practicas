@@ -1,0 +1,3 @@
+const header = document.getElementsByClassName('header'); // Es muy importante las mayusculas y minusculas...
+console.log(header);
+// este selecciona elementos segun su clase.

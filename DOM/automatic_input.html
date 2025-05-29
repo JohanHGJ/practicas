@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+        <label for="">Buscador de Nombres</label>
+        <input type="text" class="input-nombre">
+        <section class="contenedor-sugerencias"></section>
+    </form>
+    <script>
+
+        const usuarios = [
+            "camilo",
+            "santiago",
+            "maria",
+            "mario",
+            "johan",
+            "samantha",
+            "sandra",
+            "natalia",
+            "juan",
+            "felipe"
+        ]
+        const input = document.querySelector("input");
+        const contenedor = document.querySelector(".contenedor-sugerencias");
+
+        input.addEventListener("input", () => {
+            const valor = input.value.toLowerCase();
+
+            contenedor.innerHTML = "";
+
+            if (valor.trim() === "") return;
+
+            const nombres = usuarios.filter(item => item.toLowerCase().includes(valor));
+
+            nombres.forEach(item => {
+                const section = document.createElement("section");
+                section.textContent = item;
+                section.addEventListener("click", () => {
+                    input.value = item;
+                    contenedor.innerHTML = "";
+                });
+                contenedor.appendChild(section);
+            });
+        })
+    </script>
+
+</body>
+</html>

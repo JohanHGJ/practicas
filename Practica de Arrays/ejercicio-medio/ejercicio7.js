@@ -10,3 +10,10 @@ let librosMasPaginas = libros.filter(libro => libro.paginas > 300);
 librosMasPaginas.forEach(libro => {
     console.log(`${libro.titulo}, de ${libro.autor}, tiene ${libro.paginas} paginas`);
 });
+
+let librosPlus = libros.filter(libro => libro.paginas > 400)
+
+librosPlus.forEach(libro => {
+    console.log(`El libro ${libro.titulo} tiene mas de ${libro.paginas} paginas`);
+    
+})
