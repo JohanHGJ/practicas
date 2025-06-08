@@ -9,4 +9,3 @@ const usuarioMaria = usuarios.find(usuario => usuario.nombre === "María");
 console.log(`El correo de ${usuarioMaria.nombre} es ${usuarioMaria.correo}`);
 
 // .find() ya te devuelve todo el objeto del usuario "María", entonces no necesitás volver a buscar por su correo.
-
