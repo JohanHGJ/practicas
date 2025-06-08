@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API de Productos</title>
+    <script src="funcionalides.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Gestión de Productos</h1>
+    
+    <button onclick="abrirModalCrear()">Crear Producto</button>
+    <input type="text" id="busqueda" placeholder="Buscar por nombre..." oninput="filtrarProductos()">
+    
+    <div id="productos-container"></div>
+    
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2 id="modal-titulo">Nuevo Producto</h2>
+            <input type="text" id="producto-nombre" placeholder="Nombre">
+            <input type="text" id="producto-categoria" placeholder="Categoría">
+            <button onclick="guardarProducto()">Guardar</button>
+            <button onclick="cerrarModal()">Cancelar</button>
+        </div>
+    </div>
+
+</body>
+</html>
